@@ -19,6 +19,8 @@
             android:name=".DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog"/>
 
+        <activity android:name=".StateActivity" />
+
     </application>
 
 </manifest>

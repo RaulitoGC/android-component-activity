@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mOpenAnotherActivityButton;
     private Button mOpenDialogButton;
     private Button mOpenProgressDialogButton;
+    private Button mOpenStateActivityButton;
     private ProgressDialog mProgressDialog;
     private Dialog mDialog;
     private SpinnerView<String> mNamesSpinnerView;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mOpenAnotherActivityButton = (Button) findViewById(R.id.open_activity_button);
+        mOpenStateActivityButton = (Button) findViewById(R.id.open_state_activity_button);
         mOpenProgressDialogButton = (Button) findViewById(R.id.open_progress_dialog_button);
         mOpenDialogButton = (Button) findViewById(R.id.open_dialog_button);
         mNamesSpinnerView = (SpinnerView) findViewById(R.id.open_name_list_spinner);
@@ -47,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 goToAnotherActivity();
+            }
+        });
+
+        mOpenStateActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToStateActivity();
             }
         });
 
@@ -84,10 +93,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,DialogActivity.class));
     }
 
-    @Override
-    public boolean isFinishing() {
-        Log.d(TAG, super.isFinishing()+"");
-        return super.isFinishing();
+    private void goToStateActivity(){
+        startActivity(new Intent(this,StateActivity.class));
     }
 
     private void openProgressDialog(){
