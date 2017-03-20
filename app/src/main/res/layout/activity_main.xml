@@ -19,6 +19,12 @@
         android:text="Open another activity" />
 
     <Button
+        android:id="@+id/open_launch_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open launch example activity" />
+
+    <Button
         android:id="@+id/open_state_activity_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

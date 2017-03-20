@@ -20,6 +20,10 @@
             android:theme="@style/Theme.AppCompat.Dialog"/>
 
         <activity android:name=".StateActivity" />
+        <activity android:name=".launchmode.DefaultActivity" android:launchMode="standard" />
+        <activity android:name=".launchmode.SingleInstanceActivity" android:launchMode="singleInstance" android:taskAffinity=""/>
+        <activity android:name=".launchmode.SingleTaskActivity" android:launchMode="singleTask" />
+        <activity android:name=".launchmode.SingleTopActivity" android:launchMode="singleTop"/>
 
     </application>
 

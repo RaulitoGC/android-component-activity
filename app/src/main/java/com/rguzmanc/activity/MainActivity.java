@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.rguzmanc.activity.launchmode.DefaultActivity;
 import com.rguzmanc.activity.widget.SpinnerView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mOpenDialogButton;
     private Button mOpenProgressDialogButton;
     private Button mOpenStateActivityButton;
+    private Button mOpenLaunchDemoButton;
     private ProgressDialog mProgressDialog;
     private Dialog mDialog;
     private SpinnerView<String> mNamesSpinnerView;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mOpenStateActivityButton = (Button) findViewById(R.id.open_state_activity_button);
         mOpenProgressDialogButton = (Button) findViewById(R.id.open_progress_dialog_button);
         mOpenDialogButton = (Button) findViewById(R.id.open_dialog_button);
+        mOpenLaunchDemoButton = (Button) findViewById(R.id.open_launch_demo_button);
         mNamesSpinnerView = (SpinnerView) findViewById(R.id.open_name_list_spinner);
 
         mProgressDialog = new ProgressDialog(this);
@@ -49,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 goToAnotherActivity();
+            }
+        });
+
+        mOpenLaunchDemoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToLaunchDemoActivity();
             }
         });
 
@@ -96,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
     private void goToStateActivity(){
         startActivity(new Intent(this,StateActivity.class));
     }
+
+    private void goToLaunchDemoActivity(){startActivity(new Intent(this, DefaultActivity.class));}
 
     private void openProgressDialog(){
         mProgressDialog.show();
