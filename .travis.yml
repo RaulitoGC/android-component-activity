@@ -1,6 +1,17 @@
 language: android
 jdk: oraclejdk8
 
+
+notifications:
+  slack:
+    rooms:
+      - acmunmsm:EruxCN0yp9cZcHzaHhu9bBCw#android-activity
+    template:
+      - "%{repository} (%{commit}) : %{message} %{foo} "
+      - "Build details: %{build_url}"
+    on_success: always
+    on_failure: always
+
 android:
   components:
     - platform-tools
