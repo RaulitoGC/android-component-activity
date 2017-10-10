@@ -1,19 +1,45 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
+
+    playAccountConfigs {
+        defaultAccountConfig {
+            serviceAccountEmail = 'rguzmanc.161@gmail.com'
+            pk12File = file('buildsystem/key-p12.p12')
+        }
+    }
+
     defaultConfig {
         applicationId "com.rguzmanc.activity"
         minSdkVersion 17
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
+
+    play {
+        track = 'alpha'
+        untrackOld = true
+    }
+
+    productFlavors{
+        dev{
+            applicationIdSuffix ".dev"
+        }
+
+        prod{
+
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
