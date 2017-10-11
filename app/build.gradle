@@ -22,6 +22,14 @@ android {
         playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
 
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'
+        disable 'OldTargetApi'
+    }
+
     play {
         track = 'alpha'
         untrackOld = true
