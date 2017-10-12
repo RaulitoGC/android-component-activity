@@ -7,8 +7,8 @@ android {
 
     playAccountConfigs {
         defaultAccountConfig {
-            serviceAccountEmail = 'rguzmanc.161@gmail.com'
-            pk12File = file('buildsystem/key-p12.p12')
+            serviceAccountEmail = 'delivery-activity-apk@api-7157552077681537417-518647.iam.gserviceaccount.com'
+            pk12File = file('../buildsystem/key.p12')
         }
     }
 
@@ -16,10 +16,25 @@ android {
         applicationId "com.rguzmanc.activity"
         minSdkVersion 17
         targetSdkVersion 25
-        versionCode 2
+        versionCode 3
         versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         playAccountConfig = playAccountConfigs.defaultAccountConfig
+    }
+
+    signingConfigs {
+        release {
+            def Properties props = new Properties()
+            def signingProps = project.rootProject.file('signing.properties')
+            if (signingProps.exists()) {
+                props.load(signingProps.newDataInputStream())
+
+                storeFile file('../buildsystem/activitykeystore.jks')
+                storePassword props['keystorePassword']
+                keyAlias props['keyAlias']
+                keyPassword props['keyPassword']
+            }
+        }
     }
 
     lintOptions {
@@ -49,6 +64,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
