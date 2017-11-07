@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Activity.iml" filepath="$PROJECT_DIR$/Activity.iml" />
+      <module fileurl="file://C:\Users\rguzman\Documents\android-component-activity\Activity.iml" filepath="C:\Users\rguzman\Documents\android-component-activity\Activity.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-component-activity.iml" filepath="$PROJECT_DIR$/android-component-activity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
     </modules>
   </component>
 </project>
