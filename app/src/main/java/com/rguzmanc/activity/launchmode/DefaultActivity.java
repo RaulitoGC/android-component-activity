@@ -26,6 +26,8 @@ public class DefaultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_mode);
 
+        getWindow().setBackgroundDrawableResource(android.R.color.holo_blue_dark);
+
         mDefaultActivityButton = (Button) findViewById(R.id.open_normal_activity_button);
         mSingleInstanceActivityButton = (Button) findViewById(R.id.open_single_instance_activity_button);
         mSingleTopActivityButton = (Button) findViewById(R.id.open_single_single_top_activity_button);
@@ -59,6 +61,12 @@ public class DefaultActivity extends AppCompatActivity {
             }
         });
         Log.d("DefaultActivity", "On Create");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("DefaultActivity", "On Resume");
     }
 
     private void goToDefaultActivity(){

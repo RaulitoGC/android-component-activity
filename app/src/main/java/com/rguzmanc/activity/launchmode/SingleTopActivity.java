@@ -26,6 +26,8 @@ public class SingleTopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_mode);
 
+        getWindow().setBackgroundDrawableResource(android.R.color.holo_red_dark);
+
         mDefaultActivityButton = (Button) findViewById(R.id.open_normal_activity_button);
         mSingleInstanceActivityButton = (Button) findViewById(R.id.open_single_instance_activity_button);
         mSingleTopActivityButton = (Button) findViewById(R.id.open_single_single_top_activity_button);
@@ -60,6 +62,18 @@ public class SingleTopActivity extends AppCompatActivity {
         });
 
         Log.d("SingleTopActivity", "On Create");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d("SingleTopActivity", "On New Intent Called");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("SingleTopActivity", "On Resume");
     }
 
     private void goToDefaultActivity(){

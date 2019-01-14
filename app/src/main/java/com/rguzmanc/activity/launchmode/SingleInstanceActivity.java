@@ -26,6 +26,8 @@ public class SingleInstanceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_mode);
 
+        getWindow().setBackgroundDrawableResource(android.R.color.holo_purple);
+
         mDefaultActivityButton = (Button) findViewById(R.id.open_normal_activity_button);
         mSingleInstanceActivityButton = (Button) findViewById(R.id.open_single_instance_activity_button);
         mSingleTopActivityButton = (Button) findViewById(R.id.open_single_single_top_activity_button);
@@ -61,6 +63,18 @@ public class SingleInstanceActivity extends AppCompatActivity {
 
         Log.d("SingleInstanceActivity", "On Create");
 
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d("SingleInstanceActivity", "On New Intent Called");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("SingleInstanceActivity", "On Resume");
     }
 
     private void goToDefaultActivity(){
