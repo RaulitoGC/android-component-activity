@@ -12,41 +12,34 @@
     android:orientation="vertical"
     tools:context="com.rguzmanc.activity.MainActivity">
 
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/open_activity_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open another activity" />
 
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/open_launch_demo_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open launch example activity" />
 
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/open_state_activity_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open State activity" />
 
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/open_progress_dialog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open Progressdialog" />
 
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/open_dialog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open dialog" />
-
-    <com.rguzmanc.activity.widget.SpinnerView
-        android:id="@+id/open_name_list_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open list" />
-
 
 </LinearLayout>
