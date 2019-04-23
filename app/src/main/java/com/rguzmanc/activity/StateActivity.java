@@ -5,10 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 
-/**
- * Created by Raul Guzman Condor <raul.guzman@mediabyte.com.pe> on 3/19/17.
- */
-
 public class StateActivity extends AppCompatActivity {
 
     public static final String TAG = StateActivity.class.getSimpleName();

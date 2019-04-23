@@ -4,10 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-/**
- * Created by Raul Guzman Condor <raul.guzman@mediabyte.com.pe> on 3/19/17.
- */
-
 public class DialogActivity extends AppCompatActivity {
 
     public static final String TAG = DialogActivity.class.getSimpleName();
