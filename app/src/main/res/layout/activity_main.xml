@@ -12,31 +12,31 @@
     android:orientation="vertical"
     tools:context="com.rguzmanc.activity.MainActivity">
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/open_activity_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open another activity" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/open_launch_demo_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open launch example activity" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/open_state_activity_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open State activity" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/open_progress_dialog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open Progressdialog" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/open_dialog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

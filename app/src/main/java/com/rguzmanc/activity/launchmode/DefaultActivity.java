@@ -1,8 +1,10 @@
 package com.rguzmanc.activity.launchmode;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.Log;
+
+import androidx.annotation.Nullable;
+
+import timber.log.Timber;
 
 public class DefaultActivity extends BaseActivity {
 
@@ -14,13 +16,12 @@ public class DefaultActivity extends BaseActivity {
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Log.d("DefaultActivity", "On Create");
+    Timber.d("On Create");
   }
 
   @Override
   protected void onResume() {
     super.onResume();
-    Log.d("DefaultActivity", "On Resume");
   }
 
 }

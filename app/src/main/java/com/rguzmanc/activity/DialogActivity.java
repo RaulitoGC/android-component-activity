@@ -1,53 +1,55 @@
 package com.rguzmanc.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import timber.log.Timber;
 
 public class DialogActivity extends AppCompatActivity {
 
-    public static final String TAG = DialogActivity.class.getSimpleName();
+  public static final String TAG = DialogActivity.class.getSimpleName();
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_another);
-        Log.d(TAG,"On create");
-    }
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_another);
+    Timber.d("On Create");
+  }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG,"On start");
-    }
+  @Override
+  protected void onStart() {
+    super.onStart();
+    Timber.d("On Start");
+  }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG,"On resume");
-    }
+  @Override
+  protected void onResume() {
+    super.onResume();
+    Timber.d("On Resume");
+  }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TAG,"On pause");
-    }
+  @Override
+  protected void onPause() {
+    super.onPause();
+    Timber.d("On Pause");
+  }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(TAG,"On stop");
-    }
+  @Override
+  protected void onStop() {
+    super.onStop();
+    Timber.d("On Stop");
+  }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(TAG,"On restart");
-    }
+  @Override
+  protected void onRestart() {
+    super.onRestart();
+    Timber.d("On Restart");
+  }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG,"On destroy");
-    }
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    Timber.d("On Destroy");
+  }
 }

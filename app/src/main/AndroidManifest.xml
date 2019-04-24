@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.rguzmanc.activity">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rguzmanc.activity">
 
     <application
+        android:name=".ActivityApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,13 +20,23 @@
 
         <activity
             android:name=".DialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"/>
+            android:theme="@style/Theme.AppCompat.Dialog" />
 
         <activity android:name=".StateActivity" />
-        <activity android:name=".launchmode.DefaultActivity" android:launchMode="standard" />
-        <activity android:name=".launchmode.SingleInstanceActivity" android:launchMode="singleInstance" android:taskAffinity=""/>
-        <activity android:name=".launchmode.SingleTaskActivity" android:launchMode="singleTask"  android:taskAffinity=""/>
-        <activity android:name=".launchmode.SingleTopActivity" android:launchMode="singleTop"/>
+        <activity
+            android:name=".launchmode.DefaultActivity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".launchmode.SingleInstanceActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="" />
+        <activity
+            android:name=".launchmode.SingleTaskActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+        <activity
+            android:name=".launchmode.SingleTopActivity"
+            android:launchMode="singleTop" />
 
     </application>
 
